@@ -5,7 +5,7 @@
 int stack[MAX_SIZE],top=-1;
  
 int isFull(){
-	
+	return(top==MAX_SIZE
 }
 int isEmpty(){
 	
