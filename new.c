@@ -35,7 +35,8 @@ int isMatchinpair(char left, char right)
 		default: return 0;
 	}
 }
-void checkbalanced(char exp())
+void checkbalanced(char exp[])
+{
 int i;
 char c;
 stack s;
@@ -43,11 +44,13 @@ s.top=-1;
 while(exp[i]!='\0')
 {
 	if(exp[i]=='('||exp[i]=='{'||exp[i]=='[')
-	{
+	
 		push(s,exp[i]);
-	}
-	else if(s.top==-1)
+	
+	else 
 	{
+		if(s.top==-1)
+		{
      printf(" invalid exp");
      return;
  }
@@ -55,7 +58,10 @@ while(exp[i]!='\0')
  { 
 	 c=pop(&s);
 	 if(isMatchingpair(c,exp[i]))
+	{
+		 i++;
 	 continue;
+ }
 	 else
 	 {
 		 printf("invalid exp");
@@ -63,7 +69,8 @@ while(exp[i]!='\0')
 	 }
  }
 }
-
+} i++;
+} 
 
 int main()
 {
