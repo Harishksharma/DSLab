@@ -18,7 +18,6 @@ void push(struct stack *ps,char n)
 	else
 		printf("\nSTACK IS FULL");
 }
-
 int pop(struct stack *ps)
 {
 	return(ps->a[ps->top--]);
